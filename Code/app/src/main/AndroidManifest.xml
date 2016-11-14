@@ -15,14 +15,16 @@
                 android:name="com.facebook.sdk.ApplicationId"
                 android:value="@string/facebook_app_id"/>
 
-        <activity android:name="com.example.anastasia.gid.AuthorizationActivity">
+        <activity
+                android:name="com.example.anastasia.gid.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.anastasia.gid.MainActivity">
+        <activity
+                android:name="com.example.anastasia.gid.AuthorizationActivity">
         </activity>
     </application>
 

@@ -26,7 +26,7 @@ public class AuthorizationActivity extends AppCompatActivity {
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                System.out.println("onSuccess");
+                goMainScreen();
             }
 
             @Override
@@ -41,7 +41,11 @@ public class AuthorizationActivity extends AppCompatActivity {
         });
 
     }
-
+    private void goMainScreen(){
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP | intent.FLAG_ACTIVITY_CLEAR_TASK | intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
