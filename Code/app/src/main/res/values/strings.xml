@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Gid</string>
     <string name="facebook_app_id">1613292042300770</string>
-    <string name="cancel_login">onCancel</string>
-    <string name="error_login">onError</string>
+    <string name="cancel_login">Cancel authorization.</string>
+    <string name="error_login">Error authorization. Try again.</string>
 </resources>

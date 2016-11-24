@@ -5,18 +5,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/relativeLayout"
-        tools:context="com.example.anastasia.gid.MainActivity">
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tabLayout"
+        tools:context="com.anastasia.gid.MainActivity">
+
+    <com.anastasia.gid.NoSwipeViewPager
+         android:id="@+id/viewpager"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_light"
-        android:layout_alignParentBottom="true"
-        style="@style/MyStyle"
-        app:tabMode="fixed"/>
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:id="@+id/linearLayout"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            style="@style/MyStyle"
+            app:tabGravity="fill"
+            app:tabMode="fixed"/>
+
+    </LinearLayout>
+
 </RelativeLayout>
